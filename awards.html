@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards - Eslam Abdelrahman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .awards-page {
+            margin-top: 80px;
+            padding: 4rem 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            opacity: 0.1;
+            border-radius: 0 0 0 100%;
+        }
+
+        .award-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-color);
+        }
+
+        .award-year {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .award-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .award-organization {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .award-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .patent-section {
+            background-color: var(--bg-secondary);
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .patent-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .patent-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .patent-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .patent-number {
+            display: inline-block;
+            background-color: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .patent-details {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Eslam Abdelrahman</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="service.html">Teaching & Service</a></li>
+                <li><a href="awards.html" class="active">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Awards & Recognition</h1>
+            <p class="page-subtitle">Acknowledging excellence in research, innovation, and academic achievement</p>
+        </div>
+    </div>
+
+    <section class="awards-page">
+        <div class="container">
+            <div class="awards-grid">
+                <div class="award-card">
+                    <span class="award-year">2024</span>
+                    <h3 class="award-title">CEMSE Dean's List</h3>
+                    <p class="award-organization">King Abdullah University of Science and Technology (KAUST)</p>
+                    <p class="award-description">
+                        Recognized as one of the top Computer Science students at KAUST for outstanding academic performance and research contributions. The Dean's List honors students who demonstrate exceptional achievement in their doctoral studies.
+                    </p>
+                </div>
+
+                <div class="award-card">
+                    <span class="award-year">2023</span>
+                    <h3 class="award-title">2nd Best Paper Award</h3>
+                    <p class="award-organization">3DMV Workshop, CVPR 2023</p>
+                    <p class="award-description">
+                        Awarded second place for outstanding research contribution at the 3D Multi-View workshop at CVPR 2023 in Vancouver, Canada. Recognized for innovative work in 3D visual understanding and multi-view perception.
+                    </p>
+                </div>
+
+                <div class="award-card">
+                    <span class="award-year">2022</span>
+                    <h3 class="award-title">Top Innovator of the Year</h3>
+                    <p class="award-organization">Valeo Egypt</p>
+                    <p class="award-description">
+                        Honored as the Top Innovator for the year 2021-2022 across Valeo's Egypt site, recognizing exceptional contributions to innovation in autonomous driving technologies and machine learning research. Also recognized as Top Researcher for the same period.
+                    </p>
+                </div>
+
+                <div class="award-card">
+                    <span class="award-year">2017</span>
+                    <h3 class="award-title">1st Place - IbTIECar 2017</h3>
+                    <p class="award-organization">ITIDA, Egypt</p>
+                    <p class="award-description">
+                        Secured first place in the Machine Learning track at IbTIECar 2017, a national competition organized by the Information Technology Industry Development Agency (ITIDA) in Egypt, demonstrating excellence in applied machine learning and problem-solving.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="patent-section">
+        <div class="container">
+            <div class="patent-card">
+                <div class="patent-icon">📜</div>
+                <h2 class="patent-title">Automatic Visual Perception with Global Attention</h2>
+                <span class="patent-number">Patent No. 2020P01364 DE</span>
+                <p class="patent-details">
+                    <strong>Assignee:</strong> Valeo, France<br>
+                    <strong>Year:</strong> 2021<br><br>
+                    Filed patent for novel attention mechanisms in visual perception systems for autonomous driving. The invention focuses on global attention architectures that enhance the vehicle's understanding of complex driving scenarios through improved feature representation and computational efficiency.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Eslam Abdelrahman</h3>
+                    <p>Ph.D. Student in Computer Science<br>King Abdullah University of Science and Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="education.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:eslam.abdelrahman@kaust.edu.sa">Email</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=0OEerycAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://github.com/eslambakr" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eslam-bakr-a693a0124" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eslam Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eslam Abdelrahman - Machine Learning Researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Eslam Abdelrahman</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="service.html">Teaching & Service</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Machine Learning</span>
+                        <span class="title-line">Researcher</span>
+                    </h1>
+                    <p class="hero-subtitle">[Ph.D. Student @ KAUST | Intern @ Adobe] Specializing in multimodal learning, vision-language models, and AI-driven visual perception and generation</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Publications</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Top-Tier Venues</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="publications.html" class="btn btn-primary">View Publications</a>
+                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <!-- <img src="logos/personal-photo.jpg" alt="Eslam Abdelrahman" style="width: 100%; border-radius: 50%;"> -->
+                            <img src="logos/personal-photo.jpg" alt="Eslam Abdelrahman">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">Research Focus</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-main">
+                    <p class="lead-text">I am a Ph.D. student in Computer Science at KAUST, working under the supervision of Professor Mohamed Elhoseiny. My research focuses on advancing multimodal learning through Vision-Language Models (VLMs), with applications spanning 2D/3D visual perception and generation.</p>
+                    <p>Thesis Topic — Unsolicited Advice in the Era of Large Models. My research investigates how new capabilities can be incorporated into large-scale models in an efficient and principled manner, beyond the dominant paradigm of scaling model size and data. I argue that certain forms of knowledge—particularly physical understanding and fine-grained visual grounding—remain challenging for large models to acquire implicitly through scale alone. Accordingly, my work explores lightweight, targeted training interventions that introduce appropriate inductive biases without architectural expansion.</p>
+                    <p>Currently, I am interning at Adobe London, where I work on extending multimodal generation models to enable precise grounding and interleaved reasoning alongside advanced editing capabilities. My work bridges the gap between perception and generation in modern AI systems.</p>
+                    <p>Prior to KAUST, I spent nearly four years at Valeo as a Senior Machine Learning Researcher, where I tackled real-world challenges in autonomous driving, including extreme hardware limitations and industrial-scale model deployment. I was recognized as a Top Innovator and Top Researcher for 2021-2022 across Valeo's Egypt site.</p>
+                </div>
+                <div class="about-highlights">
+                    <a href="education.html" class="highlight-card highlight-card-link">
+                        <div class="highlight-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>Ph.D. in Computer Science from KAUST, focusing on unsolicited advice in the large models era</p>
+                    </a>
+                    <a href="publications.html" class="highlight-card highlight-card-link">
+                        <div class="highlight-icon">📚</div>
+                        <h3>Publications</h3>
+                        <p>15+ publications in top-tier venues including ICLR, NeurIPS, ICCV, EMNLP, and AAAI</p>
+                    </a>
+                    <a href="awards.html" class="highlight-card highlight-card-link">
+                        <div class="highlight-icon">🏆</div>
+                        <h3>Recognition</h3>
+                        <p>Top CS KAUST student (CEMSE Dean's List 2024), 2nd Best Paper at CVPR 3DMV Workshop 2023</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured</span>
+                <h2 class="section-title">Recent Publications</h2>
+            </div>
+            <div class="publications-grid">
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">ICLR 2025</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">ToddlerDiffusion: Interactive Structured Image Generation with Cascaded Schrödinger Bridge</h3>
+                    <p class="pub-authors">Eslam Abdelrahman, Liangbing Zhao, Vincent Tao Hu, Matthieu Cord, Patrick Perez, Mohamed Elhoseiny</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Paper</span>
+                        <span class="link-item">Demo</span>
+                    </div>
+                </a>
+
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">EMNLP 2025</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">InfiniBench: A Comprehensive Benchmark for Large Multimodal Models in Very Long Video Understanding</h3>
+                    <p class="pub-authors">Eslam Abdelrahman*, Kirolos Ataallah*, Mahmoud Ahmed, et al.</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Paper</span>
+                    </div>
+                </a>
+
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">ICLR 2024</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">CoT3DRef: Chain-of-Thoughts Data-Efficient 3D Visual Grounding</h3>
+                    <p class="pub-authors">Eslam Abdelrahman, Mohamed Ayman, Habib Slim, Mahmoud Ahmed, Mohamed Elhoseiny</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Code</span>
+                        <span class="link-item">Paper</span>
+                    </div>
+                </a>
+
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">ICCV 2023</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">HRS-Bench: Holistic, Reliable and Scalable Benchmark for Text-to-Image Models</h3>
+                    <p class="pub-authors">Eslam Abdelrahman, Pengzhan Sun, Xiaoqian Shen, et al.</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Code</span>
+                        <span class="link-item">Paper</span>
+                    </div>
+                </a>
+
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">NeurIPS 2023</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">Look Around and Refer: 2D Synthetic Semantics Knowledge Distillation for 3D Visual Grounding</h3>
+                    <p class="pub-authors">Eslam Abdelrahman, Yasmeen Youssef Alsaedy, Mohamed Elhoseiny</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Code</span>
+                        <span class="link-item">Video</span>
+                    </div>
+                </a>
+
+                <a href="publications.html" class="pub-card">
+                    <div class="pub-card-header">
+                        <span class="pub-venue">AAAI 2024</span>
+                        <span class="pub-type">Conference</span>
+                    </div>
+                    <h3 class="pub-title">ImageCaptioner2: Image Captioner for Image Captioning Bias Amplification Assessment</h3>
+                    <p class="pub-authors">Eslam Abdelrahman, Pengzhan Sun, Li Erran Li, Mohamed Elhoseiny</p>
+                    <div class="pub-links">
+                        <span class="link-item">Website</span>
+                        <span class="link-item">Video</span>
+                        <span class="link-item">Paper</span>
+                    </div>
+                </a>
+            </div>
+            <div class="section-footer">
+                <a href="publications.html" class="btn btn-outline">View All Publications →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Updates</span>
+                <h2 class="section-title">Latest News</h2>
+            </div>
+            <div class="news-timeline">
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Feb-May 2026</div>
+                        <div class="news-logo">
+                            <img src="logos/adobe-logo.png" alt="Adobe" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Adobe Research Internship</h3>
+                        <p>Started 3-month internship at Adobe London, working on multimodal generation models</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Nov 2025</div>
+                        <div class="news-logo">
+                            <img src="logos/under-review.png" alt="Under Review" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Multiple Paper Submissions</h3>
+                        <p>Three papers submitted focusing on adaptive thinking for image editing, visual reinforcement in VLMs, and bridging perception-grounding gaps</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Sep 2025</div>
+                        <div class="news-logo">
+                            <img src="logos/iccv-logo.png" alt="ICCV" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>CLVL Workshop Organizer</h3>
+                        <p>Co-organizing the CLVL workshop at ICCV 2025</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Aug 2025</div>
+                        <div class="news-logo">
+                            <img src="logos/emnlp-logo.png" alt="EMNLP" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Papers Accepted</h3>
+                        <p>InfiniBench accepted to EMNLP 2025, focusing on long video understanding for large multimodal models</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Mar-June 2025</div>
+                        <div class="news-logo">
+                            <img src="logos/adobe-logo.png" alt="Adobe" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Adobe Research Internship</h3>
+                        <p>Started 4-month internship at Adobe London, working on multimodal generation models</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">Jan 2025</div>
+                        <div class="news-logo">
+                            <img src="logos/iclr-logo.png" alt="ICLR" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>ToddlerDiffusion Accepted to ICLR 2025</h3>
+                        <p>Our work on interactive structured image generation accepted to ICLR 2025</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">
+                        <div class="date-text">2024</div>
+                        <div class="news-logo">
+                            <img src="logos/kaust-logo.png" alt="KAUST" class="news-logo-img">
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>CEMSE Dean's List</h3>
+                        <p>Recognized as a top CS student at KAUST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Eslam Abdelrahman</h3>
+                    <p>Ph.D. Student in Computer Science<br>King Abdullah University of Science and Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="education.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="/cdn-cgi/l/email-protection#1570667974783b747771707967747d78747b557e746066613b7071603b6674">Email</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=0OEerycAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://github.com/eslambakr" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eslam-abdelrahman-a693a0124/" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eslam Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+ 

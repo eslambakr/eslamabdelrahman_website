@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Eslam Abdelrahman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .experience-page {
+            margin-top: 80px;
+            padding: 4rem 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 200px;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-color), var(--primary-color));
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+
+        .timeline-item:nth-child(even) .timeline-date {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: right;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 200px;
+            top: 2rem;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--bg-secondary);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            padding-top: 2rem;
+            padding-right: 2rem;
+        }
+
+        .date-text {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .timeline-content {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+        }
+
+        .company-logo {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 100px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 8px;
+            padding: 0.4rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .company-logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-color);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+            padding-right: 60px;
+        }
+
+        .company-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievements-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .achievements-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .achievements-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 968px) {
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 0;
+                padding-left: 3rem;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-date {
+                grid-column: 1;
+                grid-row: auto;
+                text-align: left;
+            }
+
+            .timeline-dot {
+                left: 0;
+                transform: translateX(-50%);
+            }
+
+            .timeline-date {
+                padding-top: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Eslam Abdelrahman</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="service.html">Teaching & Service</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Professional Experience</h1>
+            <p class="page-subtitle">From industrial-scale autonomous driving to cutting-edge multimodal AI research</p>
+        </div>
+    </div>
+
+    <section class="experience-page">
+        <div class="container">
+            <div class="timeline">
+                <!-- Adobe -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <div class="date-text">March - December 2025</div>
+                        <div class="location-text">London, UK (Hybrid)</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <img src="logos/adobe-logo.png" alt="Adobe" class="company-logo-img">
+                        </div>
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Adobe</h3>
+                                <p class="role-title">Research Intern</p>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Interning for 4 months on-site in the Adobe London office, with continued remote collaboration through December 2025. Working with Krishna Kumar Singh (primary mentor, San Jose) and collaborators across London and San Jose sites on extending multimodal generation models.
+                        </p>
+                        <ul class="achievements-list">
+                            <li>Developed adaptive thinking approach for image editing using GRPO (Generalized Reward-guided Policy Optimization)</li>
+                            <li>Researched visual reinforcement techniques to strengthen visual clues in Vision-Language Models</li>
+                            <li>Bridged perception and grounding gaps in VLMs, enabling precise grounding with interleaved reasoning alongside editing capabilities</li>
+                            <li>Contributing to three research papers currently under review</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Valeo -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <div class="date-text">December 2018 - September 2022</div>
+                        <div class="location-text">Giza, Egypt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <img src="logos/valeo-logo.png" alt="Valeo" class="company-logo-img">
+                        </div>
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Valeo</h3>
+                                <p class="role-title">Senior Machine Learning Researcher</p>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Transitioned from theoretical machine learning to real-world industrial applications in autonomous driving. Tackled challenges including extreme hardware limitations, model deployment at scale, and strict client specifications.
+                        </p>
+                        <ul class="achievements-list">
+                            <li>Recognized as Top Innovator and Top Researcher of year 2021-2022 across Valeo Egypt site</li>
+                            <li>Established strong reputation with AI teams across Paris, Prague, and Tuam sites</li>
+                            <li>Published and presented research at top venues: WACV, NeurIPS workshops, ICML workshops</li>
+                            <li>Developed novel attention mechanisms and transformer-based architectures for autonomous driving</li>
+                            <li>Filed patent for automatic visual perception with global attention (2020P01364 DE)</li>
+                            <li>Led projects on moving object detection, instance segmentation, and spatio-temporal analysis</li>
+                            <li>Implemented end-to-end deep learning solutions under strict real-time and hardware constraints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cairo University -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <div class="date-text">March 2019 - June 2022</div>
+                        <div class="location-text">Giza, Egypt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <img src="logos/cairo-university-logo.png" alt="Cairo Uni" class="company-logo-img">
+                        </div>
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Cairo University</h3>
+                                <p class="role-title">Machine Learning Researcher (Master's)</p>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            Conducted thesis research on efficient attention mechanisms for computer vision, supervised by Professor Mohsen A. Rashwan.
+                        </p>
+                        <ul class="achievements-list">
+                            <li>Designed EMCA (Efficient Multiscale Channel Attention Module) to enhance CNN performance and efficiency</li>
+                            <li>Published paper in IEEE ACCESS 2022: "EMCA: Efficient Multiscale Channel Attention Module"</li>
+                            <li>Published paper at NeurIPS ML4AD Workshop 2021: "PKCAM: Previous Knowledge Channel Attention Module"</li>
+                            <li>Achieved 3.89/4.0 GPA while maintaining full-time employment at Valeo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TechiBees -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <div class="date-text">June 2017 - December 2018</div>
+                        <div class="location-text">Giza, Egypt</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">TechiBees</h3>
+                                <p class="role-title">Machine Learning Engineer</p>
+                            </div>
+                        </div>
+                        <p class="experience-description">
+                            First machine learning engineer at an innovative startup, building AI proctoring and grading systems from the ground up.
+                        </p>
+                        <ul class="achievements-list">
+                            <li>Established and standardized ML workflows for a growing startup</li>
+                            <li>Contributed to entire pipeline: design, development, and customer delivery</li>
+                            <li>Built scalable AI proctoring systems for educational institutions</li>
+                            <li>Developed automated grading solutions using computer vision and NLP</li>
+                            <li>Gained practical experience bridging research and production systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Eslam Abdelrahman</h3>
+                    <p>Ph.D. Student in Computer Science<br>King Abdullah University of Science and Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="education.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="/cdn-cgi/l/email-protection#b0d5c3dcd1dd9ed1d2d4d5dcc2d1d8ddd1def0dbd1c5c3c49ed5d4c59ec3d1">Email</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=0OEerycAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://github.com/eslambakr" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eslam-bakr-a693a0124" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eslam Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+ 

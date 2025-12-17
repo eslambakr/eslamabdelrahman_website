@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Eslam Abdelrahman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .education-page {
+            margin-top: 80px;
+            padding: 4rem 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+        }
+
+        .university-logo {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 70px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .university-logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .degree-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            padding-right: 70px;
+        }
+
+        .degree-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .university {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .date-badge {
+            background-color: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--accent-color);
+            white-space: nowrap;
+        }
+
+        .degree-details {
+            margin-top: 1.5rem;
+        }
+
+        .detail-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .detail-item::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .detail-value {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .degree-header {
+                flex-direction: column;
+            }
+
+            .date-badge {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Eslam Abdelrahman</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="service.html">Teaching & Service</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Education</h1>
+            <p class="page-subtitle">Academic journey in computer science and machine learning</p>
+        </div>
+    </div>
+
+    <section class="education-page">
+        <div class="container">
+            <div class="education-grid">
+                <!-- Ph.D. -->
+                <div class="education-card">
+                    <div class="university-logo">
+                        <img src="logos/kaust-logo.png" alt="KAUST" class="university-logo-img">
+                    </div>
+                    <div class="degree-header">
+                        <div class="degree-info">
+                            <h3>Ph.D. in Computer Science</h3>
+                            <p class="university">King Abdullah University of Science and Technology (KAUST)</p>
+                            <p class="location">Jeddah, Saudi Arabia</p>
+                        </div>
+                        <div class="date-badge">Sep 2022 - Nov 2026</div>
+                    </div>
+                    <div class="degree-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Thesis Topic:</span>
+                            <span class="detail-value">"Unsolicited Advice in the Large Models Era"</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Advisor:</span>
+                            <span class="detail-value">Professor Mohamed Elhoseiny</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Research Focus:</span>
+                            <span class="detail-value">My research challenges the prevailing belief that scaling model size and data alone is sufficient to unlock all capabilities in large models. I investigate how new skills and forms of knowledge—particularly hard-to-learn physical and grounding knowledge—can be added efficiently through targeted, principled interventions rather than brute-force scaling. In works such as Look&Learn, I demonstrate that lightweight mechanisms like attention-guidance losses can significantly improve grounding and reduce hallucinations in large VLMs (even at the 7B scale), revealing that large models still benefit from well-designed inductive biases. More broadly, my thesis argues that the next leap in foundation models will come from how we teach models, not just how big we make them.</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Internships:</span>
+                            <span class="detail-value">Adobe 2025 | Adobe 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Recognition:</span>
+                            <span class="detail-value">CEMSE Dean's List 2024 (Top CS student at KAUST)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visiting Student -->
+                <div class="education-card">
+                    <div class="university-logo">
+                        <img src="logos/kaust-logo.png" alt="KAUST" class="university-logo-img">
+                    </div>
+                    <div class="degree-header">
+                        <div class="degree-info">
+                            <h3>Visiting Student</h3>
+                            <p class="university">King Abdullah University of Science and Technology (KAUST)</p>
+                            <p class="location">Jeddah, Saudi Arabia</p>
+                        </div>
+                        <div class="date-badge">Nov 2021 - Aug 2022</div>
+                    </div>
+                    <div class="degree-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Project:</span>
+                            <span class="detail-value">3D Visual Grounding research that yielded a paper accepted to NeurIPS 2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Outcome:</span>
+                            <span class="detail-value">"Look Around and Refer: 2D Synthetic Semantics Knowledge Distillation for 3D Visual Grounding" - NeurIPS 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Master's -->
+                <div class="education-card">
+                    <div class="university-logo">
+                        <img src="logos/cairo-university-logo.png" alt="KAUST" class="university-logo-img">
+                    </div>
+                    <div class="degree-header">
+                        <div class="degree-info">
+                            <h3>Master of Science in Computer Science</h3>
+                            <p class="university">Faculty of Engineering, Cairo University</p>
+                            <p class="location">Cairo, Egypt</p>
+                        </div>
+                        <div class="date-badge">Mar 2019 - May 2022</div>
+                    </div>
+                    <div class="degree-details">
+                        <div class="detail-item">
+                            <span class="detail-label">GPA:</span>
+                            <span class="detail-value">3.89/4.0</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Specialization:</span>
+                            <span class="detail-value">Machine Learning and Computer Vision</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Thesis:</span>
+                            <span class="detail-value">"EMCA: Efficient Multiscale Channel Attention Module" - Published in IEEE ACCESS 2022</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Advisor:</span>
+                            <span class="detail-value">Professor Mohsen A. Rashwan</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Additional Publications:</span>
+                            <span class="detail-value">"PKCAM: Previous Knowledge Channel Attention Module" - NeurIPS ML4AD Workshop 2021</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's -->
+                <div class="education-card">
+                    <div class="university-logo">
+                        <img src="logos/cairo-university-logo.png" alt="KAUST" class="university-logo-img">
+                    </div>
+                    <div class="degree-header">
+                        <div class="degree-info">
+                            <h3>Bachelor of Engineering in Computer Science</h3>
+                            <p class="university">Faculty of Engineering, Cairo University</p>
+                            <p class="location">Cairo, Egypt</p>
+                        </div>
+                        <div class="date-badge">Sep 2012 - Jul 2017</div>
+                    </div>
+                    <div class="degree-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Specialization:</span>
+                            <span class="detail-value">Computer Science (Communications and Electronics Engineering)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Graduation Project:</span>
+                            <span class="detail-value">"SASB: Smart Assist System for Blind people"</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Project Advisor:</span>
+                            <span class="detail-value">Professor Mohsen A. Rashwan</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Achievement:</span>
+                            <span class="detail-value">1st Place at IbTIECar2017 in Machine Learning Track (ITIDA, Egypt)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Eslam Abdelrahman</h3>
+                    <p>Ph.D. Student in Computer Science<br>King Abdullah University of Science and Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="education.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="/cdn-cgi/l/email-protection#1174627d707c3f707375747d6370797c707f517a706462653f7475643f6270">Email</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=0OEerycAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://github.com/eslambakr" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eslam-bakr-a693a0124" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eslam Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+ 

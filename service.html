@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching & Service - Eslam Abdelrahman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .service-page {
+            margin-top: 80px;
+            padding: 4rem 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .service-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title-service {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-role {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-period {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .venue-name {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .service-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Eslam Abdelrahman</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="service.html" class="active">Teaching & Service</a></li>
+                <li><a href="awards.html">Awards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title">Teaching & Service</h1>
+            <p class="page-subtitle">Contributing to the academic community through teaching, reviewing, and mentorship</p>
+        </div>
+    </div>
+
+    <section class="service-page">
+        <div class="container">
+            <!-- Teaching -->
+            <div class="service-section">
+                <h2 class="section-title-service">Teaching Experience</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3>AI & Computer Vision Instructor</h3>
+                        <p class="service-role">Multiple Institutions</p>
+                        <p class="service-period">2017 - Present</p>
+                        <p class="service-description">
+                            Taught more than 400 students across various institutions including KAUST, Ain Shams University, Zewail City of Science and Technology, and Sprints corporation. Covered topics in artificial intelligence, machine learning, and computer vision.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">👨‍🎓</div>
+                        <h3>Graduation Projects Mentor</h3>
+                        <p class="service-role">Valeo Egypt</p>
+                        <p class="service-period">August 2019 - June 2022</p>
+                        <p class="service-description">
+                            Member of Valeo's graduation projects mentorship program, guiding undergraduate students through capstone projects in machine learning and computer vision for autonomous driving applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Service -->
+            <div class="service-section">
+                <h2 class="section-title-service">Academic Service</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Conference Reviewer</h3>
+                        <p class="service-period">November 2022 - Present</p>
+                        <ul class="service-list">
+                            <li><span class="venue-name">CVPR</span><div class="service-meta">2023, 2024, 2025, 2026</div></li>
+                            <li><span class="venue-name">NeurIPS</span><div class="service-meta">2023, 2024, 2025</div></li>
+                            <li><span class="venue-name">ICCV</span><div class="service-meta">2023, 2024, 2025</div></li>
+                            <li><span class="venue-name">ECCV</span><div class="service-meta">2024</div></li>
+                            <li><span class="venue-name">ICLR</span><div class="service-meta">2023, 2024, 2025</div></li>
+                            <li><span class="venue-name">AAAI</span><div class="service-meta">2024, 2025</div></li>
+                            <li><span class="venue-name">BMVC</span><div class="service-meta">2023</div></li>
+                            <li><span class="venue-name">IEEE-ITS</span><div class="service-meta">2021, 2022, 2023</div></li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎪</div>
+                        <h3>Workshop Organizer</h3>
+                        <p class="service-role">CLVL, ICCV 2025</p>
+                        <p class="service-period">March - September 2025</p>
+                        <p class="service-description">
+                            Co-organizing the Computer Vision for Long Videos (CLVL) workshop at ICCV 2025, focusing on advancing research in extended video understanding and processing.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🤝</div>
+                        <h3>Program Committee Member</h3>
+                        <p class="service-role">ML4AD, NeurIPS</p>
+                        <p class="service-period">May 2019 - 2023</p>
+                        <p class="service-description">
+                            Program Committee Member and Reviewer for the Machine Learning for Autonomous Driving workshop at NeurIPS, evaluating cutting-edge research in autonomous driving systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Community Service -->
+            <div class="service-section">
+                <h2 class="section-title-service">Community Service</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">❤️</div>
+                        <h3>Resala Charity Organization</h3>
+                        <p class="service-role">Member</p>
+                        <p class="service-period">August 2016 - February 2018</p>
+                        <p class="service-description">
+                            Active member of Resala Charity Organization, one of Egypt's largest volunteer organizations, providing essential resources and support to underserved communities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Eslam Abdelrahman</h3>
+                    <p>Ph.D. Student in Computer Science<br>King Abdullah University of Science and Technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="publications.html">Publications</a></li>
+                            <li><a href="experience.html">Experience</a></li>
+                            <li><a href="education.html">Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:eslam.abdelrahman@kaust.edu.sa">Email</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=0OEerycAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://github.com/eslambakr" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/eslam-bakr-a693a0124" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Eslam Abdelrahman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
